@@ -19,7 +19,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_product")
-public class Product implements Serializable{
+public class Product implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -97,7 +97,7 @@ public class Product implements Serializable{
 	@JsonIgnore
 	public Set<Order> getOrders() {
 		Set<Order> set = new HashSet<>();
-		for(OrderItem x: items) {
+		for(OrderItem x : items) {
 			set.add(x.getOrder());
 		}
 		return set;
